@@ -1,2 +1,2 @@
-# Akari-Global-Ban
+# www.akarinext.org
 

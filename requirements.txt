@@ -1,0 +1,10 @@
+uvicorn[standard]
+fastapi[all]
+starlette
+fastapi-versioning
+sqlalchemy
+fastapi-sqlalchemy
+pydantic
+alembic
+fastapi-discord
+psycopg2
