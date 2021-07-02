@@ -4,7 +4,8 @@
       {{ pageNotFound }}
     </h1>
     <h1 v-else>
-      {{ otherError }}
+      不明なエラーが発生しました。詳細は以下のとおりです<br />
+      {{ error.message }}
     </h1>
     <NuxtLink to="/"> Home page </NuxtLink>
   </v-app>
