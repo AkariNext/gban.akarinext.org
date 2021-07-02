@@ -8,7 +8,7 @@ export const mutations = {
       loggedIn: false,
     })
   },
-  toggle(AuthState, odo) {
+  toggle(AuthState) {
     AuthState.loggedIn = !AuthState.loggedIn
   },
 }
