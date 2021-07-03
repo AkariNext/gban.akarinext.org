@@ -62,7 +62,9 @@
               <v-divider class="my-3"></v-divider>
               <v-btn depressed rounded text> Edit Account</v-btn>
               <v-divider class="my-3"></v-divider>
-              <v-btn depressed rounded text> Disconnect</v-btn>
+              <v-btn depressed rounded text @click="disconnect">
+                Disconnect</v-btn
+              >
             </div>
           </v-list-item-content>
         </v-card>
@@ -134,13 +136,18 @@ export default {
       localStorage.theme = this.theme
     },
   },
-  mounted() {
+  beforeCreate() {
+    const theme = localStorage.theme === 'true'
+    this.$vuetify.theme.dark = theme
+    this.theme = theme
     if (localStorage.token && localStorage.profile) {
       this.profile = JSON.parse(localStorage.profile)
-      const theme = localStorage.theme === 'true'
-      this.$vuetify.theme.dark = theme
-      this.theme = theme
     }
+  },
+  methods: {
+    disconnect() {
+      localStorage.clear()
+    },
   },
 }
 </script>

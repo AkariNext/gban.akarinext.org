@@ -8,6 +8,9 @@ export const mutations = {
       loggedIn: false,
     })
   },
+  activate(AuthState) {
+    AuthState.loggedIn = true
+  },
   toggle(AuthState) {
     AuthState.loggedIn = !AuthState.loggedIn
   },

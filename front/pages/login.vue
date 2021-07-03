@@ -20,7 +20,7 @@ export default {
     const token = this.$route.query.token
     localStorage.token = token
     const loggedIn = this.$store.state.auth.loggedIn
-    this.$store.commit('auth/toggle', loggedIn)
+    this.$store.commit('auth/activate', loggedIn)
     const axios = this.$axios
     this.$axios
       .get('https://api.gban.akarinext.org/v1/authenticated', {
